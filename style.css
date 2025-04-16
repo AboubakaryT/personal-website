@@ -1,5 +1,10 @@
 *{
   text-decoration: none;
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 }
 
 html {
@@ -40,7 +45,7 @@ font-family: "Roboto", sans-serif;
 line-height: 1.0em;
 background-color: rgb(24, 21, 21);
 color: white;
-padding: 0;
+padding-top: 70px;
 margin: 0;
 }
 
@@ -62,9 +67,8 @@ margin: 0;
 }
 
 .skills-icons img {
-  width: 70px;   /* Controls overall size */
-  height: 70px;  /* Forces square shape */
-  object-fit: contain; /* Keeps image proportions inside the box */
+  width: 100px;  
+  object-fit: contain; 
   transition: transform 0.3s;
 }
 
@@ -179,3 +183,48 @@ margin: 0;
   font-weight: 700;
   font-style: italic;
 }
+
+
+/*Iphone*/
+@media (max-width: 600px) {
+  .navdiv {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  li a {
+    font-size: 18px;
+    margin-right: 0;
+  }
+
+  .logo a {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  #title {
+    font-size: 18px;
+    padding: 10px 15px;
+    border-width: 6px;
+    max-width: 90%;
+    word-wrap: break-word;
+  }
+
+  /* Make sure this ONLY applies to your main image */
+  .imgMain {
+    max-width: 90%;
+    height: auto;
+  }
+
+  /* Restore skill icon size on mobile */
+  .skills-icons img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
